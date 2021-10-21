@@ -2,7 +2,7 @@
 This repository is an update version of [PEAQ matlab implementation](http://www-mmsp.ece.mcgill.ca/Documents/Software/) made by [Peter Kabal](mailto://kabal@ECE.McGill.CA), affiliated at McGill University, last revised at 2004.
 
 All copyrights are reserved by Peter Kabal.
-(Copyright inquiries to Peter Kabal is ongoing.)
+(Copyright inquiry to Peter Kabal is ongoing.)
 
 # Updates
 Updates since the initial version are as following
