@@ -10,11 +10,11 @@ if (isempty (iB))
 else
     iB = mod (iB + 1, 2);   % Only two files can be "active" at a time
 end
-
-[size WAV.Fs Nbit] = wavread (File, 'size');
+ai = audioinfo(File);
+WAV.Fs = ai.SampleRate;
 WAV.Fname = File;
-WAV.Nframe = size(1);
-WAV.Nchan = size(2);
+WAV.Nframe = ai.TotalSamples;
+WAV.Nchan = ai.NumChannels;
 WAV.iB = iB;   % Buffer number
 
 % Initialize the buffer
@@ -27,4 +27,4 @@ else
     fprintf ('   Number of frames  : %d (%.4g s)\n', WAV.Nframe, WAV.Nframe / WAV.Fs);
 end
 fprintf ('   Sampling frequency: %g\n', WAV.Fs);
-fprintf ('   Number of channels: %d (%d-bit integer)\n', WAV.Nchan, Nbit);
+fprintf ('   Number of channels: %d\n', WAV.Nchan);

@@ -55,5 +55,5 @@ end
 
 Ns = min (N - Nz, WAV.Nframe - i);
 if (i >= 0 & Ns > 0)
-    x(1:Nchan,Nz+1:Nz+Ns-1+1) = Amax * (wavread (WAV.Fname, [i+1 i+Ns-1+1]))';
+    x(1:Nchan,Nz+1:Nz+Ns-1+1) = Amax * (audioread (WAV.Fname, [i+1 i+Ns-1+1]))';
 end
